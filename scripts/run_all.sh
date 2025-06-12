@@ -1,0 +1,16 @@
+CUDA_VISIBLE_DEVICES=0 nohup python -u main.py --dataset mosi --ood --task binary --n_trials 300 >mosi_ua_ood_binary.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=0 nohup python -u main.py --dataset mosi --ood --task seven --n_trials 300 >mosi_ua_ood_seven.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py --dataset mosei --ood --task binary --n_trials 300 >mosei_ua_ood_binary.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=1 nohup python -u main.py --dataset mosei --ood --task seven --n_trials 300 >mosei_ua_ood_seven.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py --dataset mosi --task binary --n_trials 300 >mosi_ua_iid_binary.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=2 nohup python -u main.py --dataset mosi --task seven --n_trials 300 >mosi_ua_iid_seven.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py --dataset mosei --task binary --n_trials 300 >mosei_ua_iid_binary.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=3 nohup python -u main.py --dataset mosei --task seven --n_trials 300 >mosei_ua_iid_seven.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=4 nohup python -u main.py --dataset mosi --aligned --task binary --n_trials 300 >mosi_a_iid_binary.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=4 nohup python -u main.py --dataset mosi --aligned --task seven --n_trials 300 >mosi_a_iid_seven.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=5 nohup python -u main.py --dataset mosei --aligned --task binary --n_trials 300 >mosei_a_iid_binary.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=5 nohup python -u main.py --dataset mosei --aligned --task seven --n_trials 300 >mosei_a_iid_seven.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=6 nohup python -u main.py --dataset mosi --aligned --cross_dataset --task binary --n_trials 300 >[cross_dataset]mosi_a_iid_binary.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=6 nohup python -u main.py --dataset mosi --aligned --cross_dataset --task seven --n_trials 300 >[cross_dataset]mosi_a_iid_seven.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=7 nohup python -u main.py --dataset mosei --aligned --cross_dataset --task binary --n_trials 300 >[cross_dataset]mosei_a_iid_binary.txt 2>&1 &
+CUDA_VISIBLE_DEVICES=7 nohup python -u main.py --dataset mosei --aligned --cross_dataset --task seven --n_trials 300 >[cross_dataset]mosei_a_iid_seven.txt 2>&1 &
