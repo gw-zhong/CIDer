@@ -15,7 +15,7 @@ Create (empty) folder for results:
 cd cider
  mkdir results
 ```
-and set the `data_path` and the `model_path` correctly in main.py.
+and set the `data_path` and the `model_path` correctly in `main.py`.
 ### Hyperparameter tuning
  ```python
 python main.py --[FLAGS]
