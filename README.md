@@ -11,26 +11,26 @@
 + OOD: [CMU-MOSI & CMU-MOSEI (**BERT**) [align & unaligned]](https://pan.baidu.com/s/1Ob3VY5j1Vz1pIaJ_k_bq9Q) `code: 19db`
 ### Preparation
 Create (empty) folder for results:
- ```python
+ ```
 cd cider
  mkdir results
 ```
-and set the `data_path` and the `model_path` correctly in `main.py`.
+and set the `data_path` and the `model_path` correctly in `main.py`, `main_eval.py`, and `main_run.py`.
 ### Hyperparameter tuning
- ```python
+ ```
 python main.py --[FLAGS]
  ```
 Or, you can use the bash script for tuning：
- ```python
+ ```
 bash scripts/run_all.sh
  ```
 Please note that `run_all.sh` contains **all the tasks** and uses **8 GPUs** for hyperparameter tuning. You should select one or several tasks for tuning according to your actual needs, instead of running all of them.
 ### Evaluation
-```python
+```
 python main_eval.py --[FLAGS]
  ```
 ### Single Training
-```python
+```
 python main_run.py --[FLAGS]
  ```
 ### reproduction
