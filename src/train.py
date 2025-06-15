@@ -257,15 +257,14 @@ def train_model(settings, hyp_params, train_loader, valid_loader, test_loader, t
     print(f'Trainable Parameters: {total_parameters}...')
     print(f'BERT Parameters: {bert_parameters}...')
     print(f'CIDer Parameters: {total_parameters - bert_parameters}...')
-    best_valid = 1e8
     best_value = 0
     curr_patience = patience
     for epoch in range(1, hyp_params.num_epochs + 1):
         start = time.time()
 
         train_loss = train(model, optimizer, task_criterion, recon_criterion)
-        val_loss, _, _, _ = evaluate(model, task_criterion, recon_criterion, test=False)
-        _, results, cf_results, truths = evaluate(model, task_criterion, recon_criterion, test=True)
+        val_loss, results, cf_results, truths = evaluate(model, task_criterion, recon_criterion, test=False)
+        evaluate(model, task_criterion, recon_criterion, test=True)
 
         end = time.time()
         duration = end - start
