@@ -1,7 +1,7 @@
 ![Python 3.10](https://img.shields.io/badge/python-3.10-green)
 ![Pytorch 2.5](https://img.shields.io/badge/pytorch-2.5-orange)
 
->Codes for **Towards Robust Multimodal Emotion Recognition under Missing Modalities and Distribution Shifts**.
+>Codes for **[Towards Robust Multimodal Emotion Recognition under Missing Modalities and Distribution Shifts](https://arxiv.org/abs/2506.10452)**.
 
 ## Usage
 ### Clone the repository
