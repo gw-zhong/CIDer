@@ -11,6 +11,8 @@
 + OOD: CMU-MOSI & CMU-MOSEI (**BERT**) [align & unaligned]
     + [BaiduYun Disk](https://pan.baidu.com/s/1Ob3VY5j1Vz1pIaJ_k_bq9Q) `code: 19db`
     + [Hugging Face](https://huggingface.co/datasets/GWZhong/MSA_OOD_Dataset_in_CIDer)
+### Download the BERT models
+- [BaiduYun Disk](https://pan.baidu.com/s/12zhRpTEx5589Bmo0OAF5cg) ```code: e7mw```
 ### Preparation
 Create (empty) folder for results:
  ```
@@ -31,6 +33,21 @@ Please note that `run_all.sh` contains **all the tasks** and uses **8 GPUs** for
 ```
 python main_eval.py --[FLAGS]
  ```
+Guidance:
+
+When conducting the evaluation, you need to correctly set the `missing_mode` in `main_eval.py`. The specific settings are as follows:
+
+- Our proposed RMFM: `--missing_mode RMFM`
+
+- Traditional RMFM: `--missing_mode RMFM_same`
+
+- RMM: `--missing_mode RMM`
+
+- TMFM: `--missing_mode TMFM`
+
+- STMFM: `--missing_mode STMFM`
+
+- SMM: `--missing_mode RMFM_same` **and** uncomment the sections in `main_eval.py` from **line 169 to line 175** and **line 188**.
 ### Single Training
 ```
 python main_run.py --[FLAGS]
@@ -56,3 +73,6 @@ Please cite our paper if you find that useful for your research:
  ```
 ## Contact
 If you have any question, feel free to contact me through [guoweizhong@zjut.edu.cn](guoweizhong@zjut.edu.cn) or [gwzhong@zju.edu.cn](gwzhong@zju.edu.cn).
+
+## Acknowledgment
+Our code is based on [MulT](https://github.com/yaohungt/Multimodal-Transformer) and [SELF-MM](https://github.com/thuiar/Self-MM). And our repartitioned MER OOD Datasets are based on [CLUE](https://github.com/Teng-Sun/CLUE_model). Thanks to their open-source spirit for saving us a lot of time.

@@ -163,7 +163,6 @@ hyp_params.embed_dim = 32
 
 print(f'### Note: You are running in BERT mode.')
 missing_rate_list = [0., 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-# missing_rate_list = [0.]
 #############################
 # Specific Modality Missing #
 #############################
