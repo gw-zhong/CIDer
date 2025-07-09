@@ -11,6 +11,7 @@
 + OOD: CMU-MOSI & CMU-MOSEI (**BERT**) [align & unaligned]
     + [BaiduYun Disk](https://pan.baidu.com/s/1Ob3VY5j1Vz1pIaJ_k_bq9Q) `code: 19db`
     + [Hugging Face](https://huggingface.co/datasets/GWZhong/MSA_OOD_Dataset_in_CIDer)
+- Cross-dataset: [CMU-MOSI & CMU-MOSEI (**BERT**) [align]](https://github.com/zrguo/CASP)
 ### Download the BERT models
 - [BaiduYun Disk](https://pan.baidu.com/s/12zhRpTEx5589Bmo0OAF5cg) ```code: e7mw```
 ### Preparation
